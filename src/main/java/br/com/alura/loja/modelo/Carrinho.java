@@ -36,8 +36,13 @@ public class Carrinho {
 	public void setRua(String rua) {
 		this.rua = rua;
 	}
+	
 	public void setCidade(String cidade) {
 		this.cidade = cidade;
+	}
+	
+	public String getCidade() {
+		return cidade;
 	}
 	
 	public long getId() {
@@ -45,7 +50,7 @@ public class Carrinho {
 	}
 	
 	public void remove(long id) {
-		for (Iterator iterator = produtos.iterator(); iterator.hasNext();) {
+		for (Iterator<Produto> iterator = produtos.iterator(); iterator.hasNext();) {
 			Produto produto = (Produto) iterator.next();
 			if(produto.getId() == id) {
 				iterator.remove();
@@ -59,7 +64,7 @@ public class Carrinho {
 	}
 
 	public void trocaQuantidade(Produto produto) {
-		for (Iterator iterator = produtos.iterator(); iterator.hasNext();) {
+		for (Iterator<Produto> iterator = produtos.iterator(); iterator.hasNext();) {
 			Produto p = (Produto) iterator.next();
 			if(p.getId() == produto.getId()) {
 				p.setQuantidade(produto.getQuantidade());
