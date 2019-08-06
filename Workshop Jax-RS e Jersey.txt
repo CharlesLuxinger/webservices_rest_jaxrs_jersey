@@ -1,0 +1,6 @@
+Workshop Jax-RS e Jersey
+
+1. Para teste utilizar curl
+
+1.2 - Para enviar um POST no curl
+	> curl -d "conteudo" url
