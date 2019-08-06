@@ -1,5 +1,12 @@
 Workshop Jax-RS e Jersey
 
+GET: Riquisitar a representação de um recurso;
+	> Apenas recebe a representação, não altera nada no servidor;
+	> Idempotente: Pode ser feita diversas vezes sem alterar estado da aplicação;
+	
+POST: Criar um recurso no servidor;
+	> Não Idempotente: Correr o risco de alterar estado da aplicação mais de 1x, caso seja refeita a requisição;
+
 1. Para teste utilizar curl
 
 1.2 - Para enviar um POST no curl

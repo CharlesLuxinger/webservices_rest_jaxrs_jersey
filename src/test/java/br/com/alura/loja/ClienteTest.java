@@ -61,8 +61,6 @@ public class ClienteTest {
 		carrinho.setCidade("Serra");
 
 		String xml = carrinho.toXML();
-		
-		System.out.println(xml);
 		Entity<String> entity = Entity.entity(xml, MediaType.APPLICATION_XML);
 
 		Response response = target.path("/carrinhos").request().post(entity);
