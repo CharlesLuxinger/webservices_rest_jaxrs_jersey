@@ -16,6 +16,10 @@ POST: Criar um recurso no servidor;
 	> GET: curl -v url
 	> POST: curl -v -d "conteudo" url
 	> DELETE: curl -v -X "DELETE" url	
+	> PUT: curl -v -X "PUT" -d "conteudo" url
 	
 1.4 - Para enviar um DELETE no curl
 	> curl -X "DELETE" url
+	
+1.4 - Para enviar um PUT no curl
+	> curl -X "PUT" -d "conteudo" url
