@@ -2,11 +2,23 @@ package br.com.caelum.estoque.modelo.usuario;
 
 import java.util.Date;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+import br.com.caelum.estoque.ws.adapters.DateAdapter;
+
+@XmlAccessorType(XmlAccessType.FIELD)
 public class TokenUsuario {
 
+	@XmlElement(required = true)
 	private String token;
+
+	@XmlJavaTypeAdapter(DateAdapter.class)
+	@XmlElement(required = true)
 	private Date dataValidade;
-	
+
 	//JAX-B precisa desse construtor
 	TokenUsuario() {
 	}
@@ -31,7 +43,7 @@ public class TokenUsuario {
 	public void setDataValidade(Date dataValidade) {
 		this.dataValidade = dataValidade;
 	}
-	
+
 
 	@Override
 	public int hashCode() {
@@ -43,18 +55,23 @@ public class TokenUsuario {
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
+		if (this == obj) {
 			return true;
-		if (obj == null)
+		}
+		if (obj == null) {
 			return false;
-		if (getClass() != obj.getClass())
+		}
+		if (getClass() != obj.getClass()) {
 			return false;
+		}
 		TokenUsuario other = (TokenUsuario) obj;
 		if (token == null) {
-			if (other.token != null)
+			if (other.token != null) {
 				return false;
-		} else if (!token.equals(other.token))
+			}
+		} else if (!token.equals(other.token)) {
 			return false;
+		}
 		return true;
 	}
 
