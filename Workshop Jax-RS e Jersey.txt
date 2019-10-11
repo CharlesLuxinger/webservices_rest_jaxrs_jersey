@@ -23,3 +23,8 @@ POST: Criar um recurso no servidor;
 	
 1.4 - Para enviar um PUT no curl
 	> curl -X "PUT" -d "conteudo" url
+
+2. JAX-WS Webservices SOAP
+	2.1 - Acessando as definicições do serviço
+		> Ao final da url root do serviço add o parametro:
+			> ?wsdl
