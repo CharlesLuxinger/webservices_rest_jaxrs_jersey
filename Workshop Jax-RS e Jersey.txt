@@ -28,3 +28,13 @@ POST: Criar um recurso no servidor;
 	2.1 - Acessando as definicições do serviço
 		> Ao final da url root do serviço add o parametro:
 			> ?wsdl
+
+	2.2 - Acessando o schema do serviço
+		> Ao final da url root do serviço add o parametro:
+			> ?xsd=1
+
+	2.3	- Para gerar o WSDL e o Schemas
+		> Na pasta raiz do projeto através do CMD
+			wsgen -cp bin br.com.package.ClassMain -wsdl -inlineSchemas
+
+			wsgen -cp bin br.com.caelum.estoque.ws.EstoqueWS -wsdl -inlineSchemas

@@ -3,7 +3,7 @@ package br.com.caelum.estoque.modelo.usuario;
 import javax.xml.ws.WebFault;
 
 @WebFault(name = "AutorizacaoFault")
-public class AutorizacaoException extends RuntimeException {
+public class AutorizacaoException extends Exception {
 	public AutorizacaoException(String mensagem) {
 		super(mensagem);
 	}
